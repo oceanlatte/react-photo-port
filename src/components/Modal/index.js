@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Modal({currentPhoto}) {
+function Modal({ onClose, currentPhoto }) {
   const {name, category, description, index} = currentPhoto;
-  
+
   return (
     <div className='modalBackDrop'>
       <div className='modalContainer'>
@@ -11,7 +11,7 @@ function Modal({currentPhoto}) {
         <p>
           {description}
         </p>
-        <button type='button'>
+        <button onClick={onClose} type='button'>
           Close the modal
         </button>
       </div>
